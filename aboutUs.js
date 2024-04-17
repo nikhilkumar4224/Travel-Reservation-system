@@ -1,15 +1,4 @@
 // script.js
-function bookJourney() {
-    var email = document.getElementById('email').value;
-    document.getElementById('confirmationMessage').innerHTML = `The journey reservation is sent to your email: <strong>${email}</strong>`;
-    document.getElementById('confirmationPopup').style.display = 'flex'; // Display the popup
-}
-
-function closePopup() {
-    document.getElementById('confirmationPopup').style.display = 'none'; // Hide the popup
-}
-
-// script.js
 function showLoginPopup() {
     document.getElementById('loginPopup').style.display = 'flex';
 }

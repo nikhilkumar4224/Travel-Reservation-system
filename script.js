@@ -134,3 +134,4 @@ function createDestinationCard(destination) {
 
     alert('Name' +name + '\nPhone:' + phone +'\nMessage:' + message);
   });    
+

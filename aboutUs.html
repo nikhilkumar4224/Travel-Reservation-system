@@ -15,24 +15,19 @@
     <div class="background"></div>
 
 
-    <div class="frontNavbar" style="margin:auto; width:90%; height:70px">
+    <div class="frontNavbar" style="width:90%; margin:auto; height:60px">
         <a href="index.html" class="logo"><img
             src="/public/Logo.jpg" height="50px" width="90px" alt="Travel" /></a>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="destination.html">Discover</a></li>
-            <li><a href="destination.html">Bookings</a></li>
-            <li><a href="aboutUs.html">About Us</a></li>
-            <li><a href="contact1.html">Contact</a></li>
-            <li>
-                <div class="profile-icon">👤</div>
-            </li>
-            <li>
-                <div class="search-icon">🔍</div>
-            </li>
-            <li><button id="signup" class="signup-btn">Sign Up</button></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destination.html">Discover</a></li>
+          <li><a href="booking1.html">Bookings</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+          <li><a href="contact1.html">Contact</a></li>
+          <li><a href="#" id="loginButton" onclick="showLoginPopup()">Login</a></li>
+        <li><a href="#" id="logoutButton" onclick="logout()" style="display:none;">Logout</a></li>
         </ul>
-    </div>
+      </div>
 
 
 
@@ -118,6 +113,41 @@
                
             </ul>
     </div>
+
+    <div id="loginPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-button" onclick="closeLoginPopup()">&times;</span>
+            <form id="loginForm" onsubmit="login(event)">
+                <h2>Login</h2>
+                <div class="form-group">
+                    <label for="gmail">Gmail:</label>
+                    <br />
+                    <input type="email" id="gmail" name="gmail" required placeholder="Enter your Gmail">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <br />
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="submit-button">Login</button>
+            </form>
+        </div>
+      </div>
+
+  <script src="script.js"></script>
+  <script src="aboutUs.js"></script>
+  <script>
+    window.embeddedChatbotConfig = {
+    chatbotId: "jCqyhA1heKEkcVwQB7Hwu",
+    domain: "www.chatbase.co"
+    }
+    </script>
+    <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="jCqyhA1heKEkcVwQB7Hwu"
+    domain="www.chatbase.co"
+    defer>
+    </script>
 </body>
 
 </html>

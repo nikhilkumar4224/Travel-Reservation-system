@@ -33,42 +33,15 @@
         <li><a href="booking1.html">Bookings</a></li>
         <li><a href="aboutUs.html">About Us</a></li>
         <li><a href="contact1.html">Contact</a></li>
-        <li>
-          <div class="profile-icon">👤</div>
-        </li>
-        <li>
-          <div class="search-icon">🔍</div>
-        </li>
-        <li>
-          <a href="/signup/sign-in.html" onclick="openHalfWindow(); return false;">
-            <button id="signup" class="signup-btn">Sign Up</button>
-          </a>
-        </li>
+        <li><a href="#" id="loginButton" onclick="showLoginPopup()">Login</a></li>
+        <li><a href="#" id="logoutButton" onclick="logout()" style="display:none;">Logout</a></li>
       </ul>
     </div>
 
     <div class="headerMidSection">
-      <h2 style="color: white; font-size: 40px">
-        FEEL THE REAL BEAUTY OF NATURE
+      <h2 style="color: white; font-size: 40px; text-align: center; ">
+        Embark on your journey with the courage to dream big. Every step forward is a step towards achieving something bigger and better than your current situation.
       </h2>
-      <div class="bookingdetails">
-        <select name="DestinationHeader" id="idfordestination">
-          <option value="Destination">Destination</option>
-          <option value="Italy">Italy</option>
-          <option value="Scotland">Scotland</option>
-          <option value="Vanice">Vanice</option>
-          <option value="India">India</option>
-          <option value="India">Other</option>
-        </select>
-        <input type="date" name="Check-in" id="idfordate" />
-        <select name="Adults" id="idforadults">
-          <option value="Adults">Adults</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3+">3 or more</option>
-        </select>
-        <input type="text" name="" id="idforsearchbar" placeholder="Search" />
-      </div>
       <div class="discountCountdown">
         <h3 style="color: rgba(255, 255, 255, 0.795)">
           Discount on new bookings
@@ -79,6 +52,7 @@
           07<span style="font-size: smaller; font-weight: 400">Sec</span>
         </h4>
       </div>
+      <a href="booking1.html"><button class="booknowbuttonsummer">BOOK NOW</button></a>
     </div>
     <!-- <div class="blurbottom"></div> -->
     <div class="headerBottomSection">
@@ -229,7 +203,6 @@
       <h2>UPTO 25% OFF</h2>
       <h4>Spend the best vacation with us</h4>
       <h3>THE NIGHTS OF THIALAND</h3>
-      <button class="booknowbuttonsummer">BOOK NOW</button>
     </div>
   </div>
 
@@ -319,9 +292,6 @@
 
   <!-- nidhi -->
   <div class="footer">
-    <p class="subscribe">Subscribe Our Newsletter</p>
-    <input type="email" placeholder="Enter your Email id" class="email" />
-    <input type="text" placeholder="Subscribe" class="sub" />
 
     <div class="box">
       <!-- TRAVELLER -->
@@ -409,8 +379,30 @@
     </div>
   </div>
 
+  <div id="loginPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-button" onclick="closeLoginPopup()">&times;</span>
+        <form id="loginForm" onsubmit="login(event)">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="gmail">Gmail:</label>
+                <br />
+                <input type="email" id="gmail" name="gmail" required placeholder="Enter your Gmail">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <br />
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
+            <button type="submit" class="submit-button">Login</button>
+        </form>
+    </div>
+  </div>
+
+
   <script src="https://kit.fontawesome.com/e2cab26559.js" crossorigin="anonymous"></script>
   <script src="script.js"></script>
+  <script src="index.js"></script>
   <script>
     window.embeddedChatbotConfig = {
     chatbotId: "jCqyhA1heKEkcVwQB7Hwu",
